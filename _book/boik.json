@@ -27,5 +27,8 @@
           "这只是个demo"
         ]
       }
-    }
+    },
+    "styles": {
+      "website": "styles/website.css"
+  }
   }
