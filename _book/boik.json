@@ -1,0 +1,31 @@
+{
+    "title": "这只是个demo",
+    "description": "这只是个demo",
+    "author": "i am beauty",
+    "language": "zh-hans",
+    "gitbook": "2.6.7",
+    "fontState": {
+      "size": "2",
+      "family": "sans",
+      "theme": "night"
+    },
+    "links": {
+      "sidebar": {
+        "Gitbook官网": "https://www.gitbook.com"
+      }
+    },
+    "plugins": [
+      "splitter",
+      "-sharing",
+      "-search",
+      "expandable-chapters"
+    ],
+    "pluginsConfig": {
+      "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord": [
+          "这只是个demo"
+        ]
+      }
+    }
+  }
