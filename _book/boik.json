@@ -11,7 +11,7 @@
     },
     "links": {
       "sidebar": {
-        "Gitbook官网": "https://www.gitbook.com"
+        "hcd": "hcd"
       }
     },
     "plugins": [
@@ -24,7 +24,7 @@
       "search-pro": {
         "cutWordLib": "nodejieba",
         "defineWord": [
-          "这只是个demo"
+          "hcd项目文档"
         ]
       }
     },
