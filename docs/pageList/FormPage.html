@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>FormPage · GitBook</title>
+        <title>FormPage(表单页面) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -83,7 +83,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FormPageSourceOrder.html" />
+    <link rel="next" href="son/formPage_group.html" />
     
     
     <link rel="prev" href="FormGridPage.html" />
@@ -146,7 +146,7 @@
                 <a href="GridPage.html">
             
                     
-                    GridPage(table页面)
+                    GridPage(table 页面)
             
                 </a>
             
@@ -230,11 +230,30 @@
                 <a href="FormPage.html">
             
                     
-                    FormPage
+                    FormPage(表单页面)
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="son/formPage_group.html">
+            
+                <a href="son/formPage_group.html">
+            
+                    
+                    group控件变现详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -294,7 +313,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >FormPage</a>
+        <a href=".." >FormPage(表单页面)</a>
     </h1>
 </div>
 
@@ -309,9 +328,178 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="formpage-&#x8868;&#x5355;&#x9875;&#x9762;&#x7EC4;&#x4EF6;&#x914D;&#x7F6E;&#x9879;&#x8BE6;&#x89E3;-&#x6240;&#x6709;&#x914D;&#x7F6E;&#x53EF;&#x5728;&#x5B50;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x67E5;&#x770B;">FormPage &#x8868;&#x5355;&#x9875;&#x9762;&#x7EC4;&#x4EF6;&#x914D;&#x7F6E;&#x9879;&#x8BE6;&#x89E3; &#x6240;&#x6709;&#x914D;&#x7F6E;&#x53EF;&#x5728;&#x5B50;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x67E5;&#x770B;</h5>
+                                <h5 id="formpage">FormPage</h5>
+<p>&#x5C55;&#x793A;&#x5982;&#x4E0B;&#x56FE;
+<img src="../image/formPageImage.png" alt="formPage"></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td></td>
+<td>from(&#x666E;&#x901A;&#x8868;&#x5355;)\dialogform(&#x5F39;&#x7A97;&#x8868;&#x5355;)</td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td></td>
+<td>add &#x4E3A; type = dialogform &#x51FA;&#x73B0;&#x8FDE;&#x7EED;&#x6DFB;&#x52A0;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>isContinuous</td>
+<td>boolean</td>
+<td></td>
+<td>true &#x4E3A; type = dialogform &#x51FA;&#x73B0;&#x8FDE;&#x7EED;&#x6DFB;&#x52A0;&#x6309;&#x94AE;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td></td>
+<td>type = dialogform &#x6807;&#x9898;</td>
+</tr>
+<tr>
+<td>width</td>
+<td>string</td>
+<td></td>
+<td>type = dialogform &#x5BBD;&#x5EA6;</td>
+</tr>
+<tr>
+<td>form</td>
+<td>object</td>
+<td></td>
+<td>&#x5185;&#x90E8;&#x8868;&#x5355;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li>&#x4F7F;&#x7528;&#x65B9;&#x5F0F; <code>&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x540C;gridPage&#x4E00;&#x6837;</code></li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> FormPage <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@/components/Page/FormPage.vue&quot;</span>;
+
+<span class="hljs-comment">// components &#x6CE8;&#x518C;&#x5B50;&#x7EC4;&#x4EF6;</span>
+
+      &lt;FormPage
+      :options=<span class="hljs-string">&quot;pageOptions&quot;</span>
+      @onFieldChange=<span class="hljs-string">&quot;onFieldChange&quot;</span>
+      @onButtonClick=<span class="hljs-string">&quot;onButtonClick&quot;</span>
+      @onFieldVisibleChange=<span class="hljs-string">&quot;onFieldVisibleChange&quot;</span>
+      ref=<span class="hljs-string">&quot;formPage&quot;</span>
+    &gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">FormPage</span>&gt;</span></span>
+</code></pre>
+<hr>
+<ul>
+<li>&#x5982;&#x679C;&#x4F5C;&#x4E3A;&#x8BE6;&#x60C5;&#x9875;&#x9762;</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4F5C;&#x4E3A;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#xFF0C;&#x53C2;&#x6570;&#x56DE;&#x7ED1;</span>
+
+<span class="hljs-comment">// &#x4F8B;&#x5B50;&#xFF1A;res&#x4E3A;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x503C;</span>
+
+<span class="hljs-comment">//1.formData  &#x5BF9;&#x5E94;&#x7ED1;&#x5B9A;&#x5230;form&#x914D;&#x7F6E;&#x7684;group&#x91CC;&#x7684;prop&#x5B57;&#x6BB5;</span>
+<span class="hljs-keyword">this</span>.pageOptions.form.formData = res;
+
+<span class="hljs-comment">//2.&#x5355;&#x4E2A;&#x56DE;&#x7ED1;</span>
+<span class="hljs-keyword">this</span>.pageOptions.form.formData.name = res.name;
+<span class="hljs-keyword">this</span>.$set(<span class="hljs-keyword">this</span>.pageOptions.form.formData, <span class="hljs-string">&quot;name&quot;</span>, res.name); <span class="hljs-comment">// &#x5F3A;&#x5236;&#x66F4;&#x65B0;</span>
+</code></pre>
+<hr>
+<ul>
+<li>form &#x914D;&#x7F6E;&#x4FE1;&#x606F;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ref</td>
+<td>string</td>
+<td></td>
+<td>&#x7EC4;&#x4EF6;&#x6807;&#x8BC6;&#xFF0C;ref &#x4F5C;&#x7528;</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>string</td>
+<td></td>
+<td>&#x5E03;&#x5C40;&#x65B9;&#x5F0F; vertical\horizontal</td>
+</tr>
+<tr>
+<td>width</td>
+<td>string</td>
+<td></td>
+<td>form &#x7EC4;&#x4EF6;&#x5BBD;&#x5EA6; &#x5982;&quot;25%&quot;</td>
+</tr>
+<tr>
+<td>elementWidth</td>
+<td>string</td>
+<td></td>
+<td>&#x63A7;&#x4EF6;&#xFF08;&#x8F93;&#x5165;&#x6846;&#xFF09;&#x5BBD;&#x5EA6; &#x5982;&quot;25%&quot;</td>
+</tr>
+<tr>
+<td>labelWidth</td>
+<td>string</td>
+<td></td>
+<td>label &#x5BBD;&#x5EA6; &#x5982;&quot;25%&quot;</td>
+</tr>
+<tr>
+<td>formData</td>
+<td>object</td>
+<td></td>
+<td>&#x5BF9;&#x5E94; group &#x914D;&#x7F6E;&#x7684;&#x53C2;&#x6570;&#x5B57;&#x6BB5;</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>boolean</td>
+<td></td>
+<td>&#x662F;&#x5426;&#x7981;&#x7528;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x6846;</td>
+</tr>
+<tr>
+<td>group</td>
+<td>array</td>
+<td></td>
+<td>&#x63A7;&#x4EF6;&#x5206;&#x7EC4;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>buttonGroupGridSumbitStyle</td>
+<td>string</td>
+<td></td>
+<td>&#x5E95;&#x90E8;&#x914D;&#x7F6E;&#x6309;&#x94AE;&#x6837;&#x5F0F;&#xFF08;&#x53EF;&#x8C03;&#x6574;&#x5E95;&#x90E8;&#x6309;&#x94AE;&#x4F4D;&#x7F6E;&#xFF09; &#x5982;&apos;text-align:center;&apos;</td>
+</tr>
+<tr>
+<td>buttonGroupGridSumbit</td>
+<td>Array</td>
+<td></td>
+<td>&#x5E95;&#x90E8;&#x914D;&#x7F6E;&#x6309;&#x94AE;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>buttonGroupStyle</td>
+<td>string</td>
+<td></td>
+<td>&#x914D;&#x7F6E;&#x53F3;&#x4E0A;&#x89D2;&#x6309;&#x94AE;&#x6837;&#x5F0F; &#x5982;&apos;text-align:center;&apos;</td>
+</tr>
+<tr>
+<td>buttonGroup</td>
+<td>Array</td>
+<td></td>
+<td>&#x56FA;&#x5B9A;&#x8868;&#x5355;&#x53F3;&#x4E0A;&#x89D2;&#x6309;&#x94AE;</td>
+</tr>
+</tbody>
+</table>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Aron.Li 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-06-16 17:28:53
+2020-06-17 10:26:24
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -345,7 +533,7 @@
                 </a>
                 
                 
-                <a href="FormPageSourceOrder.html" class="navigation navigation-next " aria-label="Next page: FormPageSourceOrder">
+                <a href="son/formPage_group.html" class="navigation navigation-next " aria-label="Next page: group控件变现详解">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -356,7 +544,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"FormPage","level":"1.7","depth":1,"next":{"title":"FormPageSourceOrder","level":"1.8","depth":1,"path":"pageList/FormPageSourceOrder.md","ref":"./pageList/FormPageSourceOrder.md","articles":[]},"previous":{"title":"FormGridPage","level":"1.6","depth":1,"path":"pageList/FormGridPage.md","ref":"./pageList/FormGridPage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Aron.Li 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pageList/FormPage.md","mtime":"2020-06-16T09:28:53.468Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-16T09:42:21.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"FormPage(表单页面)","level":"1.7","depth":1,"next":{"title":"group控件变现详解","level":"1.7.1","depth":2,"path":"pageList/son/formPage_group.md","ref":"./pageList/son/formPage_group.md","articles":[]},"previous":{"title":"FormGridPage","level":"1.6","depth":1,"path":"pageList/FormGridPage.md","ref":"./pageList/FormGridPage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Aron.Li 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pageList/FormPage.md","mtime":"2020-06-17T02:26:24.319Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T07:10:18.221Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
