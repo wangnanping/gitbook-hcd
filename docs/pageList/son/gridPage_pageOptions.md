@@ -1,5 +1,10 @@
 ##### gridPage pageOptions
 
+[`form(输入框)`](#form) [`buttonGroup(按钮)`](#buttonGroup) [`buttonGroupTop(按钮)`](#buttonGroupTop)
+[`table(表格)`](#table) [`selectableFun(表格多选框判断是否可选)`](#selectableFun) [`title(表格标题)`](#title)  [`alertMessage(展示信息)`](#alertMessage)
+
+---
+
 | name           | type    | default    | Description                                |
 | -------------- | ------- | ---------- | ------------------------------------------ |
 | form           | Object  | 详解往下看 | 页面表头的搜索条件                         |
@@ -7,12 +12,14 @@
 | buttonGroup    | Array   | 详解往下看 | 搜索条件右侧按钮（默认包含搜索、清空按钮） |
 | buttonGroupTop | Array   | 详解往下看 | 页面表顶部的按钮操作                       |
 | table          | Object  | 详解往下看 | 表格显示配置                               |
+| title          | Object  | 详解往下看 | 表格上方标题栏                             |
+| alertMessage   | Object  | 详解往下看 | 表格提示信息                               |
 
 配置项详解
 
 ---
 
-- `form 配置`
+- <span id="form">`form 配置`</span>
 
 | name         | type    | default  | Description                       |
 | ------------ | ------- | -------- | --------------------------------- |
@@ -72,7 +79,7 @@
 
 ```
 
-- `buttonGroup 配置` （当下可配置为[],默认显示搜索和清空按钮，如不需要显示则去掉 buttonGroup 配置项）
+- <span id="buttonGroup">`buttonGroup 配置`</span>（当下可配置为[],默认显示搜索和清空按钮，如不需要显示则去掉 buttonGroup 配置项）
 
 ```javascript
 [
@@ -89,7 +96,7 @@
 ];
 ```
 
-- `buttonGroupTop 配置` （当下可配置为[],默认会显示一条下划线，如不需要显示则去掉 buttonGroupTop 配置项）
+- <span id="buttonGroupTop">`buttonGroupTop 配置`</span> （当下可配置为[],默认会显示一条下划线，如不需要显示则去掉 buttonGroupTop 配置项）
 
 ```javascript
 [
@@ -106,7 +113,7 @@
 ];
 ```
 
-- `table 配置`
+- <span id="table">`table 配置`</span>
 
 | name          | type    | default | Description                                                                      |
 | ------------- | ------- | ------- | -------------------------------------------------------------------------------- |
@@ -182,7 +189,7 @@
   }
 ```
 
-- selectableFun 设置 （会一开始循环 table 数组的数据）
+- <span id="selectableFun">`selectableFun 设置`</span> （会一开始循环 table 数组的数据）
 
 ```javascript
 // 设置方法
@@ -197,4 +204,27 @@ selectableFun: any = (row: any, index: any) => {
 
 // table配置
  selectableFun: this.selectableFun,
+```
+
+- <span id="title">`title 设置`</span>
+
+```javascript
+  {
+  title: {
+    titleName: "结算信息",
+  },
+};
+```
+
+- <span id="alertMessage">`alertMessage 设置`</span>
+
+```javascript
+  {
+ alertMessage: {
+      title: "",
+      type: "info", // [success/warning/info/error]
+      description: "", // 辅助文字 显示在title下方
+      style: "margin-top:40px;padding:20px;",
+    },
+};
 ```

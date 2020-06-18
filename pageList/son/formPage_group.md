@@ -1,6 +1,8 @@
 #### group 配置详情
 
+
 [`input`](#inputId) [`select`](#selectId) [`checkbox`](#checkboxId) [`span文字展示`](#spanId) [`cascader地区选择控件`](#cascaderId) [`select-tree树形下拉`](#select-treeId) [`upload图片上传`](#uploadId) [`datePicker时间控件`](#datePickerId) [`radio单选控件`](#radioId) [`右插槽`](#rightSlotId) [`提示信息ellipsis`](#ellipsisId) [`新增自定义span`](#setspanId) [`控件显示隐藏配置isShow`](#isShowId)
+
 
 ---
 
