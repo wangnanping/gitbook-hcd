@@ -11,6 +11,7 @@
 | title        | string  |         | type = dialogform 标题                     |
 | width        | string  |         | type = dialogform 宽度                     |
 | form         | object  |         | 内部表单配置信息                           |
+| hasTips      | object  |         | 表单底部提示信息                           |
 
 ---
 
@@ -66,5 +67,17 @@ this.$set(this.pageOptions.form.formData, "name", res.name); // 强制更新
 | buttonGroupStyle           | string  |         | 配置右上角按钮样式 如'text-align:center;'                     |
 | buttonGroup                | Array   |         | 固定表单右上角按钮                                            |
 
+---
 
+- hasTips
 
+```javascript
+  {
+ hasTips: {
+      tipsInfo: "", // 显示文字信息
+      tipsType: "warning", // [success/warning/info/error]
+      isShowTipsIcon: true, // 图标显示
+      tipsClose: false,  // 是否可以关闭
+    }
+};
+```
