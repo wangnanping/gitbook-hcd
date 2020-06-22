@@ -5,7 +5,7 @@
 - [GridPage(table 页面)](./pageList/GridPage.md)
   - [Options(配置信息)](./pageList/son/gridPage_pageOptions.md)
   - [触发事件详解](./pageList/son/gridPage_function.md)
-- [DialogGridPage](./pageList/DialogGridPage.md)
+- [DialogGridPage(弹窗表格加详情页面)](./pageList/DialogGridPage.md)
 - [DialogGridPageDetail](./pageList/DialogGridPageDetail.md)
 - [FormGridPage](./pageList/FormGridPage.md)
 - [FormPage(表单页面)](./pageList/FormPage.md)
