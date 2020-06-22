@@ -11,4 +11,5 @@
 - [FormPage(表单页面)](./pageList/FormPage.md)
   - [group控件变现详解](./pageList/son/formPage_group.md)
 - [FormPageSourceOrder](./pageList/FormPageSourceOrder.md)
+- [CardDetails(展示详情页面)](./pageList/CardDetails.md)
 - [Custom introduction name](README.md)
