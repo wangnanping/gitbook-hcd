@@ -1,7 +1,7 @@
 ##### gridPage pageOptions
 
 [`form(输入框)`](#form) [`buttonGroup(按钮)`](#buttonGroup) [`buttonGroupTop(按钮)`](#buttonGroupTop)
-[`table(表格)`](#table) [`selectableFun(表格多选框判断是否可选)`](#selectableFun) [`title(表格标题)`](#title)  [`alertMessage(展示信息)`](#alertMessage)
+[`table(表格)`](#table) [`selectableFun(表格多选框判断是否可选)`](#selectableFun) [`title(表格标题)`](#title) [`alertMessage(展示信息)`](#alertMessage)
 
 ---
 
@@ -82,16 +82,19 @@
 - <span id="buttonGroup">`buttonGroup 配置`</span>（当下可配置为[],默认显示搜索和清空按钮，如不需要显示则去掉 buttonGroup 配置项）
 
 ```javascript
+// 其中有limit权限点和pagelimit页面权限参数配置，两个参数区分
 [
   {
     class: "hcd_button_default",
     text: "保存",
     methods: "save",
+    limit: "",
   },
   {
     class: "hcd_button_second",
     text: "返回",
     methods: "back",
+    pagelimit: "",
   },
 ];
 ```

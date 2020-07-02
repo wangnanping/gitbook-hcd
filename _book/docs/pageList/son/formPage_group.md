@@ -39,6 +39,7 @@ group: [
               disabled: true, // 控件是否禁用，默认false
               rules: {
                 required: true,  // 必填项
+                type:"", // 为正则验证方式， 如果同正则后端接口匹配字段名相同，优先取接口字段名，否则走本地规则验证utils filterRules
                 message: "请选择车辆类型", // 提示信息
                 trigger: "blur"
               },

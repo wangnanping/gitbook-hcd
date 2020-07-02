@@ -330,7 +330,7 @@
                                 
                                 <h5 id="gridpage-pageoptions">gridPage pageOptions</h5>
 <p><a href="#form"><code>form(&#x8F93;&#x5165;&#x6846;)</code></a> <a href="#buttonGroup"><code>buttonGroup(&#x6309;&#x94AE;)</code></a> <a href="#buttonGroupTop"><code>buttonGroupTop(&#x6309;&#x94AE;)</code></a>
-<a href="#table"><code>table(&#x8868;&#x683C;)</code></a> <a href="#selectableFun"><code>selectableFun(&#x8868;&#x683C;&#x591A;&#x9009;&#x6846;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x9009;)</code></a> <a href="#title"><code>title(&#x8868;&#x683C;&#x6807;&#x9898;)</code></a>  <a href="#alertMessage"><code>alertMessage(&#x5C55;&#x793A;&#x4FE1;&#x606F;)</code></a></p>
+<a href="#table"><code>table(&#x8868;&#x683C;)</code></a> <a href="#selectableFun"><code>selectableFun(&#x8868;&#x683C;&#x591A;&#x9009;&#x6846;&#x5224;&#x65AD;&#x662F;&#x5426;&#x53EF;&#x9009;)</code></a> <a href="#title"><code>title(&#x8868;&#x683C;&#x6807;&#x9898;)</code></a> <a href="#alertMessage"><code>alertMessage(&#x5C55;&#x793A;&#x4FE1;&#x606F;)</code></a></p>
 <hr>
 <table>
 <thead>
@@ -503,16 +503,19 @@
 <ul>
 <li><span id="buttonGroup"><code>buttonGroup &#x914D;&#x7F6E;</code></span>&#xFF08;&#x5F53;&#x4E0B;&#x53EF;&#x914D;&#x7F6E;&#x4E3A;[],&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x641C;&#x7D22;&#x548C;&#x6E05;&#x7A7A;&#x6309;&#x94AE;&#xFF0C;&#x5982;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x793A;&#x5219;&#x53BB;&#x6389; buttonGroup &#x914D;&#x7F6E;&#x9879;&#xFF09;</li>
 </ul>
-<pre><code class="lang-javascript">[
+<pre><code class="lang-javascript">// &#x5176;&#x4E2D;&#x6709;limit&#x6743;&#x9650;&#x70B9;&#x548C;pagelimit&#x9875;&#x9762;&#x6743;&#x9650;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF0C;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x533A;&#x5206;
+[
   {
     class: &quot;hcd_button_default&quot;,
     text: &quot;&#x4FDD;&#x5B58;&quot;,
     methods: &quot;save&quot;,
+    limit: &quot;&quot;,
   },
   {
     class: &quot;hcd_button_second&quot;,
     text: &quot;&#x8FD4;&#x56DE;&quot;,
     methods: &quot;back&quot;,
+    pagelimit: &quot;&quot;,
   },
 ];
 </code></pre>
@@ -684,7 +687,7 @@ selectableFun: any = (row: any, index: any) =&gt; {
 };
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Aron.Li 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2020-06-18 10:56:28
+2020-07-02 20:45:37
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -729,7 +732,7 @@ selectableFun: any = (row: any, index: any) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Options(配置信息)","level":"1.3.1","depth":2,"next":{"title":"触发事件详解","level":"1.3.2","depth":2,"path":"pageList/son/gridPage_function.md","ref":"./pageList/son/gridPage_function.md","articles":[]},"previous":{"title":"GridPage(table 页面)","level":"1.3","depth":1,"path":"pageList/GridPage.md","ref":"./pageList/GridPage.md","articles":[{"title":"Options(配置信息)","level":"1.3.1","depth":2,"path":"pageList/son/gridPage_pageOptions.md","ref":"./pageList/son/gridPage_pageOptions.md","articles":[]},{"title":"触发事件详解","level":"1.3.2","depth":2,"path":"pageList/son/gridPage_function.md","ref":"./pageList/son/gridPage_function.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Aron.Li 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pageList/son/gridPage_pageOptions.md","mtime":"2020-06-18T02:56:28.884Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T08:03:41.278Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Options(配置信息)","level":"1.3.1","depth":2,"next":{"title":"触发事件详解","level":"1.3.2","depth":2,"path":"pageList/son/gridPage_function.md","ref":"./pageList/son/gridPage_function.md","articles":[]},"previous":{"title":"GridPage(table 页面)","level":"1.3","depth":1,"path":"pageList/GridPage.md","ref":"./pageList/GridPage.md","articles":[{"title":"Options(配置信息)","level":"1.3.1","depth":2,"path":"pageList/son/gridPage_pageOptions.md","ref":"./pageList/son/gridPage_pageOptions.md","articles":[]},{"title":"触发事件详解","level":"1.3.2","depth":2,"path":"pageList/son/gridPage_function.md","ref":"./pageList/son/gridPage_function.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","back-to-top-button","chapter-fold","code","splitter","tbfed-pagefooter","page-treeview","popup"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Aron.Li 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"chapter-fold":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pageList/son/gridPage_pageOptions.md","mtime":"2020-07-02T12:45:37.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-02T13:03:08.871Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
