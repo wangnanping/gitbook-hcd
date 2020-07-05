@@ -4,6 +4,8 @@
 
 * 创建 npm install -g gitbook-cli （查看不需要创建）
 
+* 执行 gitbook install
+
 - 执行 gitbook serve
 
 #### 目录
