@@ -258,6 +258,57 @@ this.pageOptions.form.group[1].params.find(
                 }
               }
             }
+
+  // 新增参数  optionShortcuts boolean
+  /**
+  * shortcuts
+  * @parmes 今天 近七天  近30天  近3个月
+  */
+  shortcuts: [
+          {
+            title: "今天",
+            value() {
+              return {
+                start: moment().format("YYYY-MM-DD"),
+                end: moment().format("YYYY-MM-DD"),
+              };
+            },
+          },
+          {
+            title: "近七天",
+            value() {
+              return {
+                start: moment()
+                  .subtract("days", 6)
+                  .format("YYYY-MM-DD"),
+                end: moment().format("YYYY-MM-DD"),
+              };
+            },
+          },
+          {
+            title: "近30天",
+            value() {
+              return {
+                start: moment()
+                  .subtract("days", 29)
+                  .format("YYYY-MM-DD"),
+                end: moment().format("YYYY-MM-DD"),
+              };
+            },
+          },
+          {
+            title: "近3个月",
+            value() {
+              return {
+                start: moment()
+                  .subtract(3, "month")
+                  .format("YYYY-MM-DD"),
+                end: moment().format("YYYY-MM-DD"),
+              };
+            },
+          },
+        ],
+
 ```
 
 8.<span id="radioId">name:**_radio_**</span>
