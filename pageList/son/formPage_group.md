@@ -1,8 +1,6 @@
 #### group 配置详情
 
-
 [`input`](#inputId) [`select`](#selectId) [`checkbox`](#checkboxId) [`span文字展示`](#spanId) [`cascader地区选择控件`](#cascaderId) [`select-tree树形下拉`](#select-treeId) [`upload图片上传`](#uploadId) [`datePicker时间控件`](#datePickerId) [`radio单选控件`](#radioId) [`右插槽`](#rightSlotId) [`提示信息ellipsis`](#ellipsisId) [`新增自定义span`](#setspanId) [`控件显示隐藏配置isShow`](#isShowId)
-
 
 ---
 
@@ -247,6 +245,7 @@ this.pageOptions.form.group[1].params.find(
                     key: "end"
                   }
                 ],
+                optionShortcuts:true, // boolean true 不用设置shortcuts 默认显示区间选项，并默认选中近七天
                 option:{ //// (name == datePicker 使用)
                   start	开始时间	Function, Object, String	-	-
                   end	结束时间	Function, Object, String	-	-
